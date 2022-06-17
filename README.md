@@ -14,5 +14,17 @@ The player in this game has to avoid incoming obstacles, while keeping the color
 
 ## Wireframe
 
+<img src="https://github.com/hherreratejos/JavaScriptProyect/blob/main/imgs/Wireframe.png">
 
+## Technologies
 
+This proyect will use Canvas, Javascript, CSS and HTML.
+
+## Implementation Timeline
+
+Friday - Sunday: Research and bases.
+Monday: Finish bases and plan final details.
+Tuesday: Start details.
+Wednesday: Finish details.
+Thursday: Live host.
+(consider time everyday for debugging)
