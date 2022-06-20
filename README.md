@@ -28,3 +28,5 @@ Tuesday: Start details.
 Wednesday: Finish details.
 Thursday: Live host.
 (consider time everyday for debugging)
+
+// npm start
