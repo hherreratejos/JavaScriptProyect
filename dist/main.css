@@ -65,5 +65,37 @@ body {
 }
 
 h1 {
+  display: block;
   color: aqua;
+  font-size: 50px;
+}
+
+canvas {
+  display: none;
+}
+
+#first-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00FF48;
+  font-size: 40px;
+}
+
+#instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#instructions-screen {
+  display: none;
+}
+
+#game-over {
+  display: none;
+}
+
+h2 {
+  color: white;
 }

@@ -23,7 +23,7 @@ class Circle{
   update(c){
     this.draw(c);
     this.y += yv;
-    // yv += 0.5 * (10 ^ (-20))
+    // yv += 0.1 / 1000
     
 
   }

@@ -1,3 +1,7 @@
+
+let dl = 1;
+
+
 class Line{
   constructor(p1, p2, color){
     this.p1 = p1;
@@ -15,8 +19,9 @@ class Line{
 
   update(c){
     this.draw(c);
-    this.p1[1] += 1;
-    this.p2[1] += 1;
+    this.p1[1] += dl;
+    this.p2[1] += dl;
+    // dl += 0.1 / 1000
   }
 }
 

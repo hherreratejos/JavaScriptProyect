@@ -22,9 +22,9 @@ class Triangle{
 
   update(c){
     this.draw(c);
-    this.p1[1] += dy;
-    this.p2[1] += dy;
-    this.p3[1] += dy;
+    // this.p1[1] += dy;
+    // this.p2[1] += dy;
+    // this.p3[1] += dy;
   }
 }
 

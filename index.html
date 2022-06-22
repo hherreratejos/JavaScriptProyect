@@ -11,10 +11,22 @@
   </head>
 
   <body>
-    <header>
-      <h1>Game Name</h1>
-    </header>
+
+    <div id="first-screen" class="screen">
+      <h1> Neons </h1>
+      <button id="start-game"> Play! </button>
+      <button id="instructions"> Instructions </button>
+    </div>
+    <div id="instructions-screen" class="screen">
+      <h1>Instructions</h1>
+      <button id="menu-finstructions"> Main Menu </button>
+    </div> 
     <canvas id="canvas"></canvas>
+    <div id="game-over" class="screen">
+      <h1>Game Over</h1>
+      <h2 id="show-score"></h2>
+      <button id="menu-fgo"> Main Menu </button>
+    </div>
   </body>
 
 </html>
