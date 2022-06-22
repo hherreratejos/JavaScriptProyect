@@ -1,5 +1,5 @@
 
-let dl = 1;
+// let dl = 1;
 
 
 class Line{
@@ -7,6 +7,7 @@ class Line{
     this.p1 = p1;
     this.p2 = p2;
     this.color = color;
+    this.dl = 1;
   }
 
   draw(c){
@@ -19,9 +20,8 @@ class Line{
 
   update(c){
     this.draw(c);
-    this.p1[1] += dl;
-    this.p2[1] += dl;
-    // dl += 0.1 / 1000
+    this.p1[1] += this.dl;
+    this.p2[1] += this.dl;
   }
 }
 

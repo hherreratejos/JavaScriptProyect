@@ -10,22 +10,35 @@
     <title>H's Proyect</title>
   </head>
 
-  <body>
+  <body id="body">
 
-    <div id="first-screen" class="screen">
-      <h1> Neons </h1>
-      <button id="start-game"> Play! </button>
-      <button id="instructions"> Instructions </button>
+    <div id="first-screen" class="screen screen-1">
+      <h1 class="first"> NEONS </h1>
+      <button id="start-game" class="first"> Play! </button>
+      <button id="instructions" class="first"> Instructions </button>
     </div>
-    <div id="instructions-screen" class="screen">
-      <h1>Instructions</h1>
+    <div id="instructions-screen" class="screen screen-2">
+      <h1 class="second instructionst">Instructions</h1>
+      <h2 class="second">Avoid the purpule circles,</h2>
+      <h2 class="second">match the color of the lines and</h2>
+      <h2 class="second">keep it going.</h2>
       <button id="menu-finstructions"> Main Menu </button>
     </div> 
+    <div id="controls">
+      <ul>
+        <li>Q = Yellow</li><br>
+        <li>W = Red</li><br>
+        <li>E = Green</li><br>
+        <li>R = Blue</li><br>
+        <li>Right Arrow = Right</li><br>
+        <li>Ledt Arrow = Left</li><br>
+      </ul>
+    </div>
     <canvas id="canvas"></canvas>
-    <div id="game-over" class="screen">
-      <h1>Game Over</h1>
-      <h2 id="show-score"></h2>
-      <button id="menu-fgo"> Main Menu </button>
+    <div id="game-over" class="screen screen-3">
+      <h1 class="third">Game Over</h1>
+      <h2 id="show-score" class="third"></h2>
+      <button id="menu-fgo" class="third"> Main Menu </button>
     </div>
   </body>
 

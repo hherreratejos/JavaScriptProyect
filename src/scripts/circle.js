@@ -2,7 +2,7 @@
 //   console.log("i am from another file")
 // }
 
-let yv = 1;
+// let yv = 1;
 
 
 class Circle{
@@ -11,6 +11,7 @@ class Circle{
     this.y = y;
     this.r = r;
     this.color = color;
+    this.yv = 1;
   }
   
   draw(c){
@@ -22,8 +23,7 @@ class Circle{
 
   update(c){
     this.draw(c);
-    this.y += yv;
-    // yv += 0.1 / 1000
+    this.y += this.yv;
     
 
   }

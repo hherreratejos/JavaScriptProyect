@@ -26,6 +26,7 @@
     toggleScreen('canvas', true);
     toggleScreen('instructions-screen', false);
     toggleScreen('game-over', false) 
+    toggleScreen('controls', true) 
     cb();
   }
 
@@ -34,6 +35,7 @@
     toggleScreen('canvas', false);
     toggleScreen('instructions-screen', true);
     toggleScreen('game-over', false) 
+    toggleScreen('controls', false) 
   }
 
   function gameOver(cb){
@@ -41,7 +43,8 @@
     toggleScreen('first-screen', false);
     toggleScreen('canvas', false);
     toggleScreen('instructions-screen', false);
-    toggleScreen('game-over', true)  
+    toggleScreen('game-over', true) 
+    toggleScreen('controls', false)  
   }
 
   function mainMenu(){
@@ -49,6 +52,7 @@
     toggleScreen('canvas', false);
     toggleScreen('instructions-screen', false);
     toggleScreen('game-over', false) 
+    toggleScreen('controls', false) 
   }
 
   export {text, getDistance, toggleScreen, startGame, showInstructions, gameOver, mainMenu}

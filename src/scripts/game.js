@@ -32,6 +32,7 @@ class Game{
       this.l.p1[1] = 0;
       this.l.p2[1] = 0;
       this.l.color = this.lArr[Math.floor(Math.random() * 4)]
+      this.dl += 0.1
     };
 
     // Obstacles
@@ -41,6 +42,9 @@ class Game{
       if (obstacle.y - obstacle.r > this.gameHeight){
         obstacle.y = -obstacle.r * 2
         obstacle.x = this.coordArr[Math.floor(Math.random() * 2)]
+        this.obstacles.forEach(o => {
+          o.yv += 0.025
+        })
       }
     });
   }
@@ -53,7 +57,7 @@ class Game{
     }
     
     this.obstacles.forEach(obstacle => {
-      if (getDistance(this.p.x, this.p.y, obstacle.x, obstacle.y) < this.p.r + obstacle.r - this.p.r / 5 && getDistance(this.p.x, this.p.y, obstacle.x, obstacle.y) > this.p.r - obstacle.r + this.p.r / 5 && this.p.x === obstacle.x){
+      if (getDistance(this.p.x, this.p.y, obstacle.x, obstacle.y) < this.p.r + obstacle.r - this.p.r / 4 && getDistance(this.p.x, this.p.y, obstacle.x, obstacle.y) > this.p.r - obstacle.r + this.p.r / 4 && this.p.x === obstacle.x){
         result = true
       }
     });

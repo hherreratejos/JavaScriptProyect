@@ -13,10 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const playAgainbtn = document.getElementById('menu-fgo');
   const mainMenu = document.getElementById('menu-finstructions')
   const showScore = document.getElementById('show-score')
+  // const body = document.getElementById('body')
   
   
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth / 2;
+  // body.height = window.innerHeight;
+  // body.width = window.innerWidth;
   
   let game = new Game(canvas.width, canvas.height, [(canvas.width / 3), 2 * (canvas.width / 3)]);
 

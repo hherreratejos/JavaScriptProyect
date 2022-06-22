@@ -1,6 +1,15 @@
 // Entry file for CSS
 @import './styles/reset.scss';
 
+*{
+  font-family: 'Comic Sans MC';
+}
+
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
 
 body{
   display: flex;
@@ -9,32 +18,43 @@ body{
   align-items: center;
   margin: 0;
   background-color: black;
+  min-height: 100vh;
+}
+
+.screen-1{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.screen-2{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.screen-3{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
-h1{
-  display: block;
-  color: aqua;
-  font-size: 50px;
-}
 
 canvas{
   display: none;
-}
-
-#first-screen{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #00FF48;
-  font-size: 40px;
 }
 
 #instructions{
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: #FFFF00;
 }
 
 #instructions-screen{
@@ -45,7 +65,122 @@ canvas{
   display: none;
 }
 
-h2{
+#show-score{
   color: white;
+  font-size: 2rem;
+  padding: .25em 1em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em black,
+  0 0 0.45em currentColor;
 }
 
+.second{
+  color: white;
+  font-size: 4rem;
+  padding: .25em 1em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em black,
+  0 0 0.45em currentColor;
+}
+
+.instructionst{
+  color: aqua;
+}
+
+#menu-finstructions{
+  color: #00FF48;
+}
+
+#menu-fgo{
+  color: #00FF48;
+}
+
+button{
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FF0080;
+  border: currentColor 0.125em solid;
+  padding: .25em 1em;
+  border-radius: .25em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em black,
+  0 0 0.45em currentColor;
+  
+  box-shadow: 0 0 0.5em 0 currentColor, inset 0 0 0.5em 0 currentColor;
+  position: relative;
+  z-index: 999;
+  
+}
+
+
+h1{
+  font-size: 4rem;
+  text-decoration: none;
+  color: #00FFD9;
+  border: black 0.125em solid;
+  padding: .25em 1em;
+  border-radius: .25em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em rgba(255, 255, 255, 0.349),
+  0 0 0.45em currentColor;
+  
+  position: relative;
+}
+
+h2{
+  color: white;
+  font-size: 1rem;
+  padding: .25em 1em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em black,
+  0 0 0.45em currentColor;
+}
+
+h1::before{
+  content: '';
+  position: absolute;
+  background: currentColor;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+button::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 2em 0.5em currentColor, inset 0 0 2em 0.5em currentColor;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+button:hover::after{
+  opacity: 0.5;
+}
+
+#controls{
+  display: none;
+  color: white;
+  position: absolute;
+  align-content: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vh;
+  margin-top: 40vh;
+}
