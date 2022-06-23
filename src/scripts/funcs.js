@@ -35,7 +35,7 @@
     toggleScreen('canvas', false);
     toggleScreen('instructions-screen', true);
     toggleScreen('game-over', false) 
-    toggleScreen('controls', false) 
+    toggleScreen('controls', true) 
   }
 
   function gameOver(cb){

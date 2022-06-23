@@ -62,13 +62,15 @@ window.addEventListener('DOMContentLoaded', () => {
       game.handleGameOver(showScore);
     }
 
-// Score
+    // Score
 
-  text(`Score: ${Math.floor(game.score)}`,0, 50, c)
+    text(`Score: ${Math.floor(game.score)}`,0, 50, c);
 
     if (game.isGameOver === false){
       game.score += 1 / 60;
     }
+
+    // setInterval(() => window.requestAnimationFrame(animate), 1000/60)
   }
 
   // Key Binds
@@ -95,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (event) =>{
     switch( event.key){
         case 'q':
-          game.p.color = '#FFFF00'
+          game.p.color = '#FFA000'
         break
     }
   })
@@ -103,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (event) =>{
     switch( event.key){
         case 'w':
-          game.p.color = '#FF0080'
+          game.p.color = '#FF0801'
         break
     }
   })
@@ -111,7 +113,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (event) =>{
     switch( event.key){
         case 'e':
-          game.p.color = '#00FF48'
+          game.p.color = '#0ABF04'
         break
     }
   })
@@ -119,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (event) =>{
     switch( event.key){
         case 'r':
-          game.p.color = '#00FFD9'
+          game.p.color = '#0099FF'
         break
     }
   })
@@ -128,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   startGamebtn.addEventListener('click', () => {
     startGame(animate)
+    // startGame(setInterval(animate, 1000/60))
   })
 
   instructionsbtn.addEventListener('click', () => {

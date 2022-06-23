@@ -7,21 +7,21 @@ class Game{
   constructor(gameWidth, gameHeight, coordArr){
       this.gameWidth = gameWidth;
       this.gameHeight = gameHeight;
-      this.l = new Line([0, 0], [this.gameWidth, 0], '#FFFF00');
-      this.p = new Circle(2 * (this.gameWidth / 3), 5 * (this.gameHeight / 6), (this.gameWidth / 7) / 3, '#FFFF00');
+      this.l = new Line([0, 0], [this.gameWidth, 0], '#FFA000');
+      this.p = new Circle(2 * (this.gameWidth / 3), 5 * (this.gameHeight / 6), (this.gameWidth / 7) / 3, '#FFA000');
       this.obstacles = [];
       this.generateObstacles();
       this.score = 0;
       this.isGameOver = false;
       this.coordArr = coordArr;
-      this.lArr = ['#FFFF00', '#FF0080', '#00FF48', '#00FFD9'];
+      this.lArr = ['#0099FF', '#0ABF04', '#FFA000', '#FF0801'];
   }
 
   generateObstacles(){
-    this.obstacles.push(new Circle(this.gameWidth / 3, this.gameHeight / 4 , (this.gameWidth / 6) / 4, 'purple'));
-    this.obstacles.push( new Circle(this.gameWidth / 3, this.gameHeight/ 2, (this.gameWidth / 6) / 4, 'purple'));
-    this.obstacles.push(new Circle(this.gameWidth / 3,3 * (this.gameHeight / 4), (this.gameWidth / 6) / 4, 'purple'));
-    this.obstacles.push( new Circle(this.gameWidth / 3,this.gameHeight, (this.gameWidth / 6) / 4, 'purple'));
+    this.obstacles.push(new Circle(this.gameWidth / 3, this.gameHeight / 4 , (this.gameWidth / 6) / 4, '#AE00FF'));
+    this.obstacles.push( new Circle(this.gameWidth / 3, this.gameHeight/ 2, (this.gameWidth / 6) / 4, '#AE00FF'));
+    this.obstacles.push(new Circle(this.gameWidth / 3,3 * (this.gameHeight / 4), (this.gameWidth / 6) / 4, '#AE00FF'));
+    this.obstacles.push( new Circle(this.gameWidth / 3,this.gameHeight, (this.gameWidth / 6) / 4, '#AE00FF'));
   }
 
   updatePosition(c){
@@ -32,7 +32,7 @@ class Game{
       this.l.p1[1] = 0;
       this.l.p2[1] = 0;
       this.l.color = this.lArr[Math.floor(Math.random() * 4)]
-      this.dl += 0.1
+      this.dl += 0.001
     };
 
     // Obstacles
@@ -43,7 +43,7 @@ class Game{
         obstacle.y = -obstacle.r * 2
         obstacle.x = this.coordArr[Math.floor(Math.random() * 2)]
         this.obstacles.forEach(o => {
-          o.yv += 0.025
+          o.yv += 0.00025
         })
       }
     });

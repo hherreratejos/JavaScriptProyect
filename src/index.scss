@@ -54,11 +54,12 @@ canvas{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFFF00;
+  color: #FFA000;
 }
 
 #instructions-screen{
   display: none;
+  width: 100vh;
 }
 
 #game-over{
@@ -77,31 +78,36 @@ canvas{
 
 .second{
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   padding: .25em 1em;
-  background-color: black;
+  // background-color: black;
+  // background-color:rgba(255, 255, 255, 0)
   text-shadow: 
   0 0 0.25em black,
   0 0 0.45em currentColor;
+  flex-wrap: wrap;
+  width: 45%;
+  line-height: 1;
 }
 
 .instructionst{
-  color: aqua;
+  color: #0099FF;
+  font-size: 4rem;
 }
 
 #menu-finstructions{
-  color: #00FF48;
+  color: #0ABF04;
 }
 
 #menu-fgo{
-  color: #00FF48;
+  color: #0ABF04;
 }
 
 button{
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-  color: #FF0080;
+  color: #FF0801;
   border: currentColor 0.125em solid;
   padding: .25em 1em;
   border-radius: .25em;
@@ -120,7 +126,7 @@ button{
 h1{
   font-size: 4rem;
   text-decoration: none;
-  color: #00FFD9;
+  color: #0099FF;
   border: black 0.125em solid;
   padding: .25em 1em;
   border-radius: .25em;
@@ -134,9 +140,9 @@ h1{
 
 h2{
   color: white;
-  font-size: 1rem;
+  font-size: 0.25rem;
   padding: .25em 1em;
-  background-color: black;
+  // background-color: black;
   text-shadow: 
   0 0 0.25em black,
   0 0 0.45em currentColor;
@@ -183,4 +189,75 @@ button:hover::after{
   height: 100vh;
   width: 100vh;
   margin-top: 40vh;
+}
+
+#Yellow{
+  color: #FFA000;
+}
+
+#Red{
+  color: #FF0801;
+}
+
+#Green{
+  color: #0ABF04;
+}
+
+#Blue{
+  color: #0099FF;
+}
+
+#Grey{
+  color: #c0c0c0;
+}
+
+#controls ul{
+  padding-right: 1px;
+}
+.color{
+  padding-right: 1px;
+}
+
+.GitHub{
+  display: flex;
+  position: absolute;
+  align-content: flex-start;
+  height: 50px;
+  width: 100px;
+  top: 1px;
+  right: 1px;
+}
+
+#myGitHub{
+  // height: 4vh;
+  // width: 10vh;
+  color: #c0c0c0;
+  cursor: pointer;
+  text-decoration: none;
+  border: currentColor 0.125em solid;
+  padding: .25em 1em;
+  border-radius: .25em;
+  background-color: black;
+  text-shadow: 
+  0 0 0.25em black,
+  0 0 0.45em currentColor;
+  
+  box-shadow: 0 0 0.5em 0 currentColor, inset 0 0 0.5em 0 currentColor;
+}
+
+#myGitHub::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 2em 0.5em currentColor, inset 0 0 2em 0.5em currentColor;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+#myGitHub:hover::after{
+  opacity: 0.5;
 }
