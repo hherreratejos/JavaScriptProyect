@@ -2,15 +2,15 @@
 
 Link : https://hherreratejos.github.io/JavaScriptProyect/
 
-Is a one player game, where the user plays as a circle that can change colors.
+- Is a one player game, where the user plays as a circle that can change colors.
 
-The goal is to survive as long as possible, avoiding incoming circles and matching the color of the incoming lines.
+- The goal is to survive as long as possible, avoiding incoming circles and matching the color of the incoming lines.
 
-The controls used are 'QWER', the left arrow and the right arrow.
+- The controls used are 'QWER', the left arrow and the right arrow.
 
 ## Technologies
 
-Canvas renders every element in the game and takes care of the movement aswell.
+- Canvas renders every element in the game and takes care of the movement aswell.
 
 ## Functionality
 
