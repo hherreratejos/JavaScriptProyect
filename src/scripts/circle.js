@@ -24,8 +24,6 @@ class Circle{
   update(c){
     this.draw(c);
     this.y += this.yv;
-    
-
   }
 
 }

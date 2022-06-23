@@ -1,32 +1,52 @@
-## Background
+## Neons
 
-The player in this game has to avoid incoming obstacles, while keeping the color of the circle matching with the background.
+Link : https://hherreratejos.github.io/JavaScriptProyect/
 
-## Functionality & MVPs
+Is a one player game, where the user plays as a circle that can change colors.
 
-1. Player can move to the sides, in one of the two lanes.
-2. Player can change the color of the circle that represents the player.
-3. Obstacles move on the playe's direction.
-4. The game keeps track of the score.
-5. The page keeps track of the top 5 high scores.
-6. The game includes instructions.
-7. The game includes a short tutorial.
+The goal is to survive as long as possible, avoiding incoming circles and matching the color of the incoming lines.
 
-## Wireframe
-
-<img src="https://github.com/hherreratejos/JavaScriptProyect/blob/main/imgs/Wireframe.png">
+The controls used are 'QWER', the left arrow and the right arrow.
 
 ## Technologies
 
-This proyect will use Canvas, Javascript, CSS and HTML.
+Canvas renders every element in the game and takes care of the movement aswell.
 
-## Implementation Timeline
+## Functionality
 
-Friday - Sunday: Research and bases.
-Monday: Finish bases and plan final details.
-Tuesday: Start details.
-Wednesday: Finish details.
-Thursday: Live host.
-(consider time everyday for debugging)
+- The user can change the posision of the main circle between two lanes and change it's color to one of 4 colors, specified in the controls.
 
-// npm start
+- Obstacles such as lines and grey circles move toward the player by updating their position and redrawing them.
+
+``` javascript
+// Circle
+
+  update(c){
+    this.draw(c);
+    this.y += this.yv;
+  }
+
+// yv = y velocity
+```
+
+``` javascript
+// Line
+
+  update(c){
+    this.draw(c);
+    this.p1[1] += this.dl;
+    this.p2[1] += this.dl;
+  }
+
+// dl = line velocity
+```
+    
+  - The score will increase live in the screen and The final score will show in the Game Over screen.
+  
+  - The main screen has 3 buttons to my Github, to start the game or to go to the instructions screen, that glow when hover over them.
+
+## Future Features
+
+* Different dificulties that change the velocity and the number of colors aveilable.
+* Music added with a mute/unmute button.
+* Updated controls panel with buttons to make the game playable on touch screens.
